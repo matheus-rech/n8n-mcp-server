@@ -1,9 +1,8 @@
 module.exports = {
   // Use commonjs style export
-  preset: 'ts-jest',
   testEnvironment: 'node',
   transform: {
-    '^.+\\.tsx?$': 'babel-jest',
+    '^.+\\.tsx?$': ['ts-jest', { tsconfig: 'tsconfig.test.json' }],
   },
   // Allow src and test folders to resolve imports properly
   moduleNameMapper: {
